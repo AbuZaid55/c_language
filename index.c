@@ -124,18 +124,33 @@
     // return 0;
 // }
 
+// funcitons
+// #include<stdio.h>
+// int sum(int a,int b); //function prototype. it use when we define function after calling
+// void func1(int a){
+//     printf("Void funciton not return anything");
+// }
+// int main(){
+//     int a =5;
+//     int b= 8;
+//     int c = sum(a,b);
+//     printf("%d",c);
+// }
+// int sum(int a, int b){
+//     return a+b;
+// }
+
 
 #include<stdio.h>
-int sum(int a,int b); //function prototype. it use when we define function after calling
-void func1(int a){
-    printf("Void funciton not return anything");
-}
+
 int main(){
-    int a =5;
-    int b= 8;
-    int c = sum(a,b);
-    printf("%d",c);
-}
-int sum(int a, int b){
-    return a+b;
+    int arr[5]={};
+    int arr2[5][2]={{1,2,3,4,5},{1,2,3,4,5}};
+    for(int i=0;i<5;i++){
+        printf("Enter the value of array:- ");
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<5;i++){
+        printf("Value of array:- %d\n",arr[i]);
+    }
 }
