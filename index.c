@@ -18,6 +18,8 @@
     // printf("a+b= %f\n",a+b);
     // // %f => use for floting point number
     // // %d => use for integer number
+    // // %p => use for print porinter
+    // // %x => use for print porinter in hexadecimal form
 
     // int a;
     // int b;
@@ -141,16 +143,177 @@
 // }
 
 
-#include<stdio.h>
+// #include<stdio.h>
+// #include<string.h>
 
+// int main(){
+    // int arr[5]={};
+    // int arr2[5][2]={{1,2,3,4,5},{1,2,3,4,5}};
+    // for(int i=0;i<5;i++){
+    //     printf("Enter the value of array:- ");
+    //     scanf("%d",&arr[i]);
+    // }
+    // for(int i=0;i<5;i++){
+    //     printf("Value of array:- %d\n",arr[i]);
+    // }
+
+    // int a = 75;
+    // int *ptr = &a;
+    // printf("Value of a is %d\n", a);
+    // printf("Value of a is %p\n", *ptr);
+    // printf("Value of a is %x\n", *ptr);
+    // printf("%d\n",ptr-1); // sub 4 because 1 int size = 4 bit
+    // printf("%d\n",ptr);
+    // printf("%d\n",ptr+1); // add 4 because 1 int size = 4bit
+
+    // int arr[]={1,2,3,4,5,6,7};
+    // printf("%d\n",arr);   //same
+    // printf("%d\n",arr+0); // same
+    // printf("%d\n",&arr[0]); // same
+    // printf("%d\n",arr+1); // same2
+    // printf("%d\n",&arr[1]); //same2 
+
+
+    //print * trangle
+    // int size;
+    // printf("Enter trangle size: -");
+    // scanf("%d",&size);
+    // for (int i = 0; i < size; i++)
+    // {
+    //     for(int j=size; j>=size-i; j--){
+    //         printf("*");
+    //     }
+    //     printf("\n");
+    // }
+    
+
+    // char str[]={'a','b','u','z','a','i','d','\0'};
+    // char str1[8]= "abuzaid";  //str length sholud be string length+1 in both case , +1 for Null, null repersent the end of string
+    // if we do not give string length+1 lenght then it will print like this-> abuzaidN so we should give lenght here 8
+
+    // printf("Using printf %s\n",str);
+    // puts(str);
+    // puts(str1);
+
+    // char str[8];
+    // printf("Enter your string:- ");
+    // gets(str);  //gets for take input string. it can take whitespaces but scanf can not
+    // puts(str);
+
+    // char s1[]="abu";
+    // char s2[]="zaid";
+    // char s3[42];
+
+    // puts(strcat(s1,s2));
+    // printf("%d\n",strlen(s1));  
+    // puts(strrev(s1));
+    // strcpy(s3,s2);
+    // puts(s3);
+    // printf("%d",strcmp(s1,s2)); 
+    // // strcmp => if s1[0] before to s2[0] then print -1 if equal then print 0 and if after then print 1
+
+// }
+
+
+// #include<stdio.h>
+
+// struct Student {
+//     int id;
+//     float mark;
+// };
+
+// union Strudent
+// {
+//     int id;
+//     float mark;
+// };
+// // union is same to the struct but in union we can access union property only one at a time
+
+
+// int main(){
+//     struct Student s1, s2, s3;
+//     s1.id=1;
+//     s1.mark=1.00;
+//     s2.id=2;
+//     s2.mark=2.00;
+//     s3.id=3;
+//     s3.mark=3.00;
+
+//     // or 
+//     struct Student s1={1,1.00};
+
+//     printf("%d\n",s1.id);
+//     printf("%f\n",s1.mark);
+// }
+
+
+// #include<stdio.h>
+// int main(){
+//     // typedef <pre_name> <alias_name>
+//     typedef unsigned long ul;
+//     typedef int integer; // integer repesent the int we can give anything on interger place
+//     ul l1,l2,l3;
+//     integer a = 4;
+// }
+
+// local variable => function and block level scope
+// global variable => which variable decliaer outside of main function
+// formal variable => which valriable pass in then function during function creation
+// static variable => 
+    //static variable remember old value. If we declaer a static valribale inside a functioin and in this function we update this static variable. after this if we call this function next time then it update value which are updated in the preveous call.
+    //if we do't initilize it it will auto initialize 0.
+    // we can store only constent value in the static valriable and can't store function
+    // static int my_value = 10;
+
+
+
+
+// #include<stdio.h>
+// #include<stdlib.h>
+
+// int main(){
+//     int *ptr;
+//     int n;
+//     printf("Enter the size of the array you want to create:- ");
+//     scanf("%d",&n);
+
+//     ptr=(int *)malloc(n*sizeof(int));
+//     // ptr=(int *)calloc(n,sizeof(int));
+//     // ptr=(int *)realloc(ptr,n*sizeof(int));
+//     for(int i=0;i<n;i++){
+//         printf("Enter the value no %d of the array:- ",i);
+//         scanf("%d",&ptr[i]);
+//     }
+//     for(int i=0;i<n;i++){
+//         printf("The value at %d of this array is %d\n",i,ptr[i]);
+//     }
+
+//     // calloc and malloc are same both used for allocat dinamic momory. Only one different is malloc retern garbage value if we not give array index value white calloc automatic allocat zero;
+//     // realloc use for change momory size of old ptr. old ptr which already difine by malloc or calloc
+// }
+
+
+// Typeof Variable and storage class
+// auto int myVal = 5 or int my_value=5 // auto storage class or automatic variable
+// extern int myVal;  // external storage class. it use when variable define in other file
+// register int myVal = 10; // Register storage class. It use when we want to use any variable so fast
+
+
+// #include<stdio.h>
+// #include<stdlib.h>
+// #include<time.h>
+// int generateRanNum(int n){
+//     srand(time(NULL));
+//     return rand()%n;
+// };
+// int main(){
+//     printf("The random number between 0 to n is:- %d",generateRanNum(200));
+// }
+
+#include<stdio.h>
 int main(){
-    int arr[5]={};
-    int arr2[5][2]={{1,2,3,4,5},{1,2,3,4,5}};
-    for(int i=0;i<5;i++){
-        printf("Enter the value of array:- ");
-        scanf("%d",&arr[i]);
-    }
-    for(int i=0;i<5;i++){
-        printf("Value of array:- %d\n",arr[i]);
-    }
+    void *ptr;
+    int a = 6;
+    ptr=&a;
+    printf("The value of a is %d",*((int *)ptr)); // void pointer can't print direct that's why we difint int first and then print
 }
