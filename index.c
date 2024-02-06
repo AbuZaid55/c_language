@@ -362,10 +362,10 @@
 // }
 
 
-#include<stdio.h>
-#include<stdlib.h>
-int main(){
-    FILE *ptr = NULL;
+// #include<stdio.h>
+// #include<stdlib.h>
+// int main(){
+//     FILE *ptr = NULL;
 
     //*********Reading file********
     // char str[34];
@@ -410,4 +410,58 @@ int main(){
 
 
     // fclose(ptr);
-}
+// }
+
+//Commond line argument
+// go to terminal and run => .\index.exe html css 
+// here argc = 3 
+// and argv = [.\index.exe,html,css]
+// #include<stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     printf("The value of argc is %d\n",argc);
+//     for (int i = 0; i < argc; i++)
+//     {
+//         printf("The argument at index no %d has a value of %s\n",i,argv[i]);
+
+//     }
+//     return 0;
+// }
+
+
+
+//int num = atoi("1") //convert string into a number
+// strcmp(firstString,secondString) // return 0 if both string is equal other wise return -1;
+
+// //function pointer
+// #include<stdio.h>
+// int sum (int a,int b){
+//     return a+b;
+// }
+// int main(){
+//     int (*fPtr)(int,int); //declaring a function pointer
+//     fPtr = &sum; //creating a function pointer
+//     int d = (*fPtr)(4,6); //dereferencing a functioin poiter
+//     printf("The value of d is %d\n",d);
+// }
+
+//callback funtion
+// #include<stdio.h>
+// int sum (int a,int b){
+//     return a+b;
+// }
+// void greetHello(int (*fPtr)(int,int)){
+//     printf("Hello User\n");
+//     printf("The sum of 3 and 4 is %d\n",fPtr(3,4));
+// }
+// void greetGM(int (*fPtr)(int,int)){
+//     printf("Good Morning User\n");
+//     printf("The sum of 3 and 4 is %d\n",fPtr(3,4));
+// }
+// int main(){
+//     int (*fPtr)(int,int); 
+//     fPtr = sum; 
+//     greetHello(fPtr);
+//     greetGM(fPtr);
+// }
+
