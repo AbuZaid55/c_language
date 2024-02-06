@@ -310,10 +310,104 @@
 //     printf("The random number between 0 to n is:- %d",generateRanNum(200));
 // }
 
+// #include<stdio.h>
+// int main(){
+//     void *ptr;
+//     int a = 6;
+//     ptr=&a;
+//     printf("The value of a is %d",*((int *)ptr)); // void pointer can't print direct that's why we difint int first and then print
+// }
+
+
+// #include<stdio.h>
+// #include<stdlib.h>
+// int myfun(){
+//     int a = 34;
+//     return &a;
+// }
+// int main(){
+    //Deallocation of memory
+    // int n = 4;
+    // int *ptr = (int *)malloc(n*sizeof(int));
+    // free(ptr); // ptr now become a dangling pointer
+    // ptr=NULL; // ptr no longer dangling
+
+    //Returning local variable
+    // int *ptr = myfun(); //ptr point to invalid location so this is become dangling pointer
+    // return 0;
+
+    //Variable going out of scope
+    // int *ptr;
+    // {
+    //     int a=10;
+    //     ptr=&a; // ptr point to invalid location
+    // }
+    //here ptr in dangling pointer
+
+    // Wild Pointer 
+    // int * ptr ; //This is wild pointer. because we have not initialize any location of this pointer. this is not good thing
+    // ptr=NULL; // this is good thing and pointer become a null pointer
+// }
+
+//Preporcesser
+// #include<stdio.h>
+// #include<stdlib.h>
+// int main(){
+//     printf("File name is %s\n",__FILE__);
+//     printf("Today's date is %s\n",__DATE__);
+//     printf("Time now is %s\n",__TIME__);
+//     printf("Line no is %d\n",__LINE__);
+//     printf("ANSI: %d\n",__STDC__);
+//     return 0;
+// }
+
+
 #include<stdio.h>
+#include<stdlib.h>
 int main(){
-    void *ptr;
-    int a = 6;
-    ptr=&a;
-    printf("The value of a is %d",*((int *)ptr)); // void pointer can't print direct that's why we difint int first and then print
+    FILE *ptr = NULL;
+
+    //*********Reading file********
+    // char str[34];
+    // ptr = fopen("test.txt","r");
+    // fscanf(ptr, "%s", str);
+    // printf("The content of this file has %s\n",str);
+
+    //*******Writing File **********
+    // char str[34]= "This is my text.";
+    // ptr=fopen("test.txt","w");
+    // fprintf(ptr,"%s",str);
+
+    //*******Append File **********
+    // char str[34]= "This is my text.";
+    // ptr=fopen("test.txt","a");
+    // fprintf(ptr,"%s",str);
+
+    // //*******Close File **********
+    // fclose(ptr);
+
+    //******* fgetc **********
+    // ptr = fopen("test.txt","r");
+    // char c = fgetc(ptr);
+    // printf("The character 1'st read was %c\n",c);
+
+    // ******* fgets **********
+    // ptr = fopen("test.txt","r");
+    // char str[4];
+    // fgets(str,3,ptr);
+    // printf("The 3 character string is %s\n",str);
+
+    // ******* fputc **********
+    // ptr = fopen("test.txt","w");
+    // fputc('A',ptr);
+
+    // ******* fputs **********
+    //  ptr = fopen("test.txt","w");
+    //  ptr = fopen("test.txt","r+");
+    //  ptr = fopen("test.txt","w+");
+    //  ptr = fopen("test.txt","a+");
+    // fputs("This is Abu Zaid.",ptr);
+
+
+    // fclose(ptr);
 }
