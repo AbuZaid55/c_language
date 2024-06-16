@@ -6,7 +6,7 @@
     // int a;
     // printf("Hello World\n");
     // printf("Enter Your Number:- ");
-    // scanf("%d",&a);
+    // scanf("%d",&a);  //For input a
     // printf("Your Number is:- %d",a);
 
     // printf("%lu",sizeof(double));
@@ -16,6 +16,7 @@
     // a=35.00;
     // b=6.00;
     // printf("a+b= %f\n",a+b);
+    //printf("a+b= %f and a in integer is %d\n",a+b,(int)a);
     // // %f => use for floting point number
     // // %d => use for integer number
     // // %p => use for print porinter
@@ -23,40 +24,53 @@
 
     // int a;
     // int b;
-    // a=2;
-    // b=3;
-    // printf("a&b = %d\n",a&b); //10 & 11 => 10 =>2
-    // printf("a|b = %d\n",a|b); //10 & 11 => 11 =>3
-    // printf("a^b = %d\n",a^b); //10 & 11 => 01 =>1
+    // a=2; //binary 10
+    // b=3; //binary 11
+    // printf("a&b = %d\n",a&b); //10 & 11 => 10 =>2  //And
+    // printf("a|b = %d\n",a|b); //10 & 11 => 11 =>3  //or
+    // printf("a^b = %d\n",a^b); //10 & 11 => 01 =>1  // XOR 
 
     // importent for understanding %d and %f 
     // int a = 8;
     // float b=7.333;
     // printf("Hello Wrold\n");
     // printf("The value of a is %d and the value of b is %f\n",a,b);
-    // printf("%8.2f\n",b); //2 repesent the number of integer after decimala and 8 repesent the space from right to left;
+    // printf("%8.2f\n",b); //2 repesent the number of integer after decimala and 8 repesent the space in left;
 
     // int a= 2;
     // int b= 3;
     // printf("This is a %d and this is b %d",a,b);
 
-    // // printf("%-18.2f this",b); 
+    // // printf("%-18.2f this",(float)b); //output=>3.00                  this //18 space and 2 decimal point
 
     // %c => charcter
     // %d=> integer
     // %f => float
-    // %l => long
+    // %l => long int
+    // %u => short unsigned integer
+    // %lu => unsigned long integer
     // %lf => double
     // %Lf => long double
+    // %p => print address in hexadecimal
+    // %x => hexadecimal integer
+    // %o => octal integer
+    // %s => string
+    // %e => print no in e formate //eg: 2.330000e+000
 
-    // const int a = 6
+    // const int a = 6;
     // printf("%d",my_value);
 
-    // int i = 0;
+    // int i = 11;
     // if(i<10){
-    //     printf("%d",i);
-    // }else{
-    //     printf("%d",i);
+    //     printf("%d first",i);
+    // }
+    // else if (i==10)
+    // {
+    //     printf("Equal to 10\n");
+    // }
+    
+    // else{
+    //     printf("%d third",i+2);
     // }
     
     // int a = 3;  
@@ -73,13 +87,14 @@
     //     break;
     // }
 
-    // int i=1;
+    // int i=11;
     // do
     // {
     //    printf("%d\n",i);
     //    i++;
     // } while (i<11);
 
+    // int i = 0;
     // while (i<11)
     // {
     //     printf("%d\n",i);
@@ -106,10 +121,10 @@
     //     printf("%d\n",i);
     //     for (int j = 0; j < 8; j++)
     //     {
-    //        printf("This is inside loop no %d\n",j);
     //        if(j==3){
     //         goto end; // goto end break all loop on give condition
     //        }
+    //        printf("This is inside loop no %d\n",j);
     //     }
         
     // }
@@ -162,21 +177,21 @@
     // printf("Value of a is %d\n", a);
     // printf("Value of a is %p\n", *ptr);
     // printf("Value of a is %x\n", *ptr);
-    // printf("%d\n",ptr-1); // sub 4 because 1 int size = 4 bit
-    // printf("%d\n",ptr);
-    // printf("%d\n",ptr+1); // add 4 because 1 int size = 4bit
+    // printf("%d\n",*ptr-1); // sub 4 because 1 int size = 4 bit
+    // printf("%d\n",*ptr);
+    // printf("%d\n",*ptr+1); // add 4 because 1 int size = 4bit
 
     // int arr[]={1,2,3,4,5,6,7};
-    // printf("%d\n",arr);   //same
-    // printf("%d\n",arr+0); // same
-    // printf("%d\n",&arr[0]); // same
-    // printf("%d\n",arr+1); // same2
-    // printf("%d\n",&arr[1]); //same2 
+    // printf("%d\n",*arr);   //same
+    // printf("%d\n",*arr+0); // same
+    // printf("%d\n",arr[0]); // same
+    // printf("%d\n",*arr+1); // same2
+    // printf("%d\n",arr[1]); //same2 
 
 
-    //print * trangle
+    // print * trangle
     // int size;
-    // printf("Enter trangle size: -");
+    // printf("Enter trangle size:- ");
     // scanf("%d",&size);
     // for (int i = 0; i < size; i++)
     // {
@@ -210,7 +225,7 @@
     // strcpy(s3,s2);
     // puts(s3);
     // printf("%d",strcmp(s1,s2)); 
-    // // strcmp => if s1[0] before to s2[0] then print -1 if equal then print 0 and if after then print 1
+    // strcmp => if s1[0] before to s2[0] then print -1 if equal then print 0 and if after then print 1
 
 // }
 
@@ -227,23 +242,24 @@
 //     int id;
 //     float mark;
 // };
-// // union is same to the struct but in union we can access union property only one at a time
+// union is same to the struct but in union we can access union property only one at a time
 
 
 // int main(){
-//     struct Student s1, s2, s3;
-//     s1.id=1;
-//     s1.mark=1.00;
-//     s2.id=2;
-//     s2.mark=2.00;
-//     s3.id=3;
-//     s3.mark=3.00;
+    // struct Student s1, s2, s3;
+    // s1.id=1;
+    // s1.mark=1.00;
+    // s2.id=2;
+    // s2.mark=2.00;
+    // s3.id=3;
+    // s3.mark=3.00;
 
-//     // or 
-//     struct Student s1={1,1.00};
+    // or 
+    // struct Student s1={1,1.00};
+    // struct Student s2={2,2.00};
 
-//     printf("%d\n",s1.id);
-//     printf("%f\n",s1.mark);
+    // printf("%d\n",s2.id);
+    // printf("%f\n",s1.mark);
 // }
 
 
@@ -288,8 +304,8 @@
 //         printf("The value at %d of this array is %d\n",i,ptr[i]);
 //     }
 
-//     // calloc and malloc are same both used for allocat dinamic momory. Only one different is malloc retern garbage value if we not give array index value white calloc automatic allocat zero;
-//     // realloc use for change momory size of old ptr. old ptr which already difine by malloc or calloc
+    // calloc and malloc are same both used for allocat dinamic momory. Only one different is malloc retern garbage value if we not give array index value white calloc automatic allocat zero;
+    // realloc use for change momory size of old ptr. old ptr which already difine by malloc or calloc
 // }
 
 
@@ -307,15 +323,18 @@
 //     return rand()%n;
 // };
 // int main(){
-//     printf("The random number between 0 to n is:- %d",generateRanNum(200));
+//     printf("%d",generateRanNum(200));
 // }
 
 // #include<stdio.h>
 // int main(){
 //     void *ptr;
 //     int a = 6;
+//     char b = 'c';
 //     ptr=&a;
-//     printf("The value of a is %d",*((int *)ptr)); // void pointer can't print direct that's why we difint int first and then print
+//     printf("The value of a is %d\n",*((int *)ptr)); // void pointer can't print direct that's why we difint int first and then print
+//     ptr=&b;
+//     printf("The value of b is %c", *(char *)ptr);
 // }
 
 
@@ -368,7 +387,7 @@
 //     FILE *ptr = NULL;
 
     //*********Reading file********
-    // char str[34];
+    // char str[340];
     // ptr = fopen("test.txt","r");
     // fscanf(ptr, "%s", str);
     // printf("The content of this file has %s\n",str);
@@ -394,7 +413,7 @@
     // ******* fgets **********
     // ptr = fopen("test.txt","r");
     // char str[4];
-    // fgets(str,3,ptr);
+    // fgets(str,1,ptr);
     // printf("The 3 character string is %s\n",str);
 
     // ******* fputc **********
@@ -464,4 +483,6 @@
 //     greetHello(fPtr);
 //     greetGM(fPtr);
 // }
+
+
 
